@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Layout for HW Keyboard – cz-prog-typo</string>
+    <string name="app_label">Additonal Keymap (Czech Prog Typo)</string>
+    <string name="keyboard_layout_label">User Keyboard Layout</string>
+    <string name="keyboard_layout_czech">Czech Programmer Typographic</string>
+    <string name="app_welcome">Czech layout map file is installed. To set it go to Settings → Language and input → Physical keyboard → select your HW keyboard (must be connected) and choose Czech Programmer Typographic layout for your input method.</string>
+</resources>

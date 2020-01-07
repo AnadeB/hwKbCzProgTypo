@@ -1,0 +1,469 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#
+# Czech (programmers + typographic) keyboard layout.
+# Copyright (c) 2020 Tomáš Hudec
+#
+
+# My bluetooth keyboard generates BACK for the Esc key (even in Windows mode).
+# In Android mode it is BACK.
+#
+# remap Esc to ESCAPE
+map	key   1	ESCAPE	# Esc generates ESCAPE
+
+# In case of “fallback ENTER” for “NUMPAD_ENTER” does not work:
+map	key  96	ENTER	# NumPad Enter generates ENTER
+
+type OVERLAY
+#type FULL
+
+### ROW 1
+
+#key ESCAPE {
+#	base:				fallback BACK
+#	alt, meta:			fallback HOME
+#	ctrl:				fallback MENU
+#}
+
+key GRAVE {
+	label:				'`'
+	base:				'`'		# ` \u0060
+	shift:				'~'		# ~ \u007E
+	ralt:				'\u201A'	# ‚ \u201A
+	shift+ralt:			'\u2018'	# ‘ \u2018
+}
+key 1 {
+	label:				'+'
+	base:				'+'		# + \u002B
+	shift:				'1'		# 1 \u0031
+	ralt:				'!'		# ! \u0021
+	shift+ralt:			'\u2019'	# ’ \u2019
+}
+key 2 {
+	label:				'\u011B'
+	base:				'\u011B'	# ě \u011B
+	shift:				'2'		# 2 \u0032
+	ralt:				'@'		# @ \u0040
+	shift+ralt, capslock:		'\u011A'	# Ě \u011A
+}
+key 3 {
+	label:				'\u0161'
+	base:				'\u0161'	# š \u0161
+	shift:				'3'		# 3 \u0033
+	ralt:				'#'		# # \u0023
+	shift+ralt, capslock:		'\u0160'	# Š \u0160
+}
+key 4 {
+	label:				'\u010D'
+	base:				'\u010D'	# č \u010D
+	shift:				'4'		# 4 \u0034
+	ralt:				'$'		# $ \u0024
+	shift+ralt, capslock:		'\u010C'	# Č \u010C
+}
+key 5 {
+	label:				'\u0159'
+	base:				'\u0159'	# ř \u0159
+	shift:				'5'		# 5 \u0035
+	ralt:				'%'		# % \u0025
+	shift+ralt, capslock:		'\u0158'	# Ř \u0158
+}
+key 6 {
+	label:				'\u017E'
+	base:				'\u017E'	# ž \u017E
+	shift:				'6'		# 6 \u0036
+	ralt:				'^'		# ^ \u005E
+	shift+ralt, capslock:		'\u017D'	# Ž \u017D
+}
+key 7 {
+	label:				'\u00FD'
+	base:				'\u00FD'	# ý \u00FD
+	shift:				'7'		# 7 \u0037
+	ralt:				'&'		# & \u0026
+	shift+ralt, capslock:		'\u00DD'	# Ý \u00DD
+}
+key 8 {
+	label:				'\u00E1'
+	base:				'\u00E1'	# á \u00E1
+	shift:				'8'		# 8 \u0038
+	ralt:				'*'		# * \u002A
+	shift+ralt, capslock:		'\u00C1'	# Á \u00C1
+}
+key 9 {
+	label:				'\u00ED'
+	base:				'\u00ED'	# í \u00ED
+	shift:				'9'		# 9 \u0039
+	ralt:				'('		# ( \u0028
+	shift+ralt, capslock:		'\u00CD'	# Í \u00CD
+}
+key 0 {
+	label:				'\u00E9'
+	base:				'\u00E9'	# é \u00E9
+	shift:				'0'		# 0 \u0030
+	ralt:				')'		# ) \u0029
+	shift+ralt, capslock:		'\u00C9'	# É \u00C9
+}
+key MINUS {
+	label:				'='
+	base:				'='		# = \u003D
+	shift:				'-'		# - \u002D
+	ralt:				'_'		# _ \u005F
+	shift+ralt:			'\u2212'	# − \u2212
+}
+key EQUALS {
+	label:				'\u00B4'
+	base:				'\u0301'	# ´ \u0301
+	shift:				'\u030C'	# ˇ \u030C
+	ralt:				'\u2260'	# ≠ \u2260
+	shift+ralt:			'\u2248'	# ≈ \u2248
+}
+
+# BackSpace
+#key DEL {
+#	base:				fallback DEL
+#	#shift, ralt:			map FORWARD_DEL		# not supported, only fallback which is useless
+#}
+
+# Delete
+#key FORWARD_DEL {
+#	base:				fallback FORWARD_DEL
+#	#rshift, alt:			map INSERT		# not supported, only fallback which is useless
+#}
+
+
+### ROW 2
+
+#key TAB {
+#	label:				'\t'	
+#	base:				'\t'		# ⇥ \u0009
+#}
+
+key Q {
+	label:				'Q'
+	base:				'q'		# q \u0071
+	shift, capslock:		'Q'		# Q \u0051
+	ralt:				'\\'		# \ \u005C
+	shift+ralt, capslock+ralt:	'\u03A9'	# Ω \u03A9
+}
+key W {
+	label:				'W'
+	base:				'w'		# w \u0077
+	shift, capslock:		'W'		# W \u0057
+	ralt:				'|'		# | \u007C
+	shift+ralt, capslock+ralt:	'\u0141'	# Ł \u0141
+}
+key E {
+	label:				'E'
+	base:				'e'		# e \u0065
+	shift, capslock:		'E'		# E \u0045
+	ralt:				'\u20AC'	# € \u20AC
+	shift+ralt:			'\u00EB'	# ë \u00EB
+}
+key R {
+	label:				'R'
+	base:				'r'		# r \u0072
+	shift, capslock:		'R'		# R \u0052
+	ralt:				'\u2030'	# ‰ \u2030
+	shift+ralt:			'\u00AE'	# ® \u00AE
+}
+key T {
+	label:				'T'
+	base:				't'		# t \u0074
+	shift, capslock:		'T'		# T \u0054
+	ralt:				'\u0165'	# ť \u0165
+	shift+ralt, capslock+ralt:	'\u0164'	# Ť \u0164
+	capslock+shift+ralt:		'\u0165'	# ť \u0165
+}
+key Y {
+	label:				'Y'
+	base:				'y'		# y \u0079
+	shift, capslock:		'Y'		# Y \u0059
+	ralt:				'\u2190'	# ← \u2190
+	shift+ralt:			'\u00A5'	# ¥ \u00A5
+}
+key U {
+	label:				'U'
+	base:				'u'		# u \u0075
+	shift, capslock:		'U'		# U \u0055
+	ralt:				'\u2193'	# ↓ \u2193
+	shift+ralt:			'\u2191'	# ↑ \u2191
+}
+key I {
+	label:				'I'
+	base:				'i'		# i \u0069
+	shift, capslock:		'I'		# I \u0049
+	ralt:				'\u2192'	# → \u2192
+	shift+ralt:			'\uFB01'	# ﬁ \uFB01
+}
+key O {
+	label:				'O'
+	base:				'o'		# o \u006F
+	shift, capslock:		'O'		# O \u004F
+	ralt:				'\u00F3'	# ó \u00F3
+	shift+ralt, capslock+ralt:	'\u00D3'	# Ó \u00D3
+	capslock+shift+ralt:		'\u00F3'	# ó \u00F3
+}
+key P {
+	label:				'P'
+	base:				'p'		# p \u0070
+	shift, capslock:		'P'		# P \u0050
+	ralt:				'\u2032'	# ′ \u2032
+	shift+ralt:			'\u2033'	# ″ \u2033
+}
+key LEFT_BRACKET {
+	label:				'['
+	base:				'['		# [ \u005B
+	shift:				'{'		# { \u007B
+	ralt:				'\u00FA'	# ú \u00FA
+	shift+ralt, capslock+ralt:	'\u00DA'	# Ú \u00DA
+	capslock+shift+ralt:		'\u00FA'	# ú \u00FA
+}
+key RIGHT_BRACKET {
+	label:				']'
+	base:				']'		# ] \u005D
+	shift:				'}'		# } \u007D
+	ralt:				'\u00B1'	# ± \u00B1
+	shift+ralt:			'\u2213'	# ∓ \u2213
+}
+
+key BACKSLASH {
+	label:				'\\'
+	base:				'\\'		# \ \u005C
+	shift:				'|'		# | \u007C
+	ralt:				'\u0308'	# ¨ \u0308
+	shift+ralt:			'\u00E0'	# à \u00E0
+}
+
+### ROW 3
+
+key A {
+	label:				'A'
+	base:				'a'		# a \u0061
+	shift, capslock:		'A'		# A \u0041
+	ralt:				'\u00E6'	# æ \u00E6
+	shift+ralt, capslock+ralt:	'\u00C6'	# Æ \u00C6
+}
+key S {
+	label:				'S'
+	base:				's'		# s \u0073
+	shift, capslock:		'S'		# S \u0053
+	ralt:				'\u00DF'	# ß \u00DF
+	#shift+ralt:			'\uFB06'	# ﬆ \uFB06
+	shift+ralt:			'\u00A0'	# ⍽ \u00A0
+}
+key D {
+	label:				'D'
+	base:				'd'		# d \u0064
+	shift, capslock:		'D'		# D \u0044
+	ralt:				'\u010F'	# ď \u010F
+	shift+ralt, capslock+ralt:	'\u010E'	# Ď \u010E
+	capslock+shift+ralt:		'\u010F'	# ď \u010F
+}
+key F {
+	label:				'F'
+	base:				'f'		# f \u0066
+	shift, capslock:		'F'		# F \u0046
+	ralt:				'\uFB00'	# ﬀ \uFB00
+	shift+ralt:			'\uFB05'	# ﬅ \uFB05
+}
+key G {
+	label:				'G'
+	base:				'g'		# g \u0067
+	shift, capslock:		'G'		# G \u0047
+	ralt:				'\u014B'	# ŋ \u014B
+	shift+ralt, capslock+ralt:	'\u014A'	# Ŋ \u014A
+	capslock+shift+ralt:		'\u014B'	# ŋ \u014B
+}
+key H {
+	label:				'H'
+	base:				'h'		# h \u0068
+	shift, capslock:		'H'		# H \u0048
+	ralt:				'\u2010'	# ‐ \u2010
+	shift+ralt:			'\u2011'	# ‑ \u2011
+}
+key J {
+	label:				'J'
+	base:				'j'		# j \u006A
+	shift, capslock:		'J'		# J \u004A
+	ralt:				'\u00BB'	# » \u00BB
+	shift+ralt:			'\u00AB'	# « \u00AB
+}
+key K {
+	label:				'K'
+	base:				'k'		# k \u006B
+	shift, capslock:		'K'		# K \u004B
+	ralt:				'\u2020'	# † \u2020
+	shift+ralt:			'\u2021'	# ‡ \u2021
+}
+key L {
+	label:				'L'
+	base:				'l'		# l \u006C
+	shift, capslock:		'L'		# L \u004C
+	ralt:				'\uFB02'	# ﬂ \uFB02
+	shift+ralt:			'\uFB04'	# ﬄ \uFB04
+}
+key SEMICOLON {
+	label:				';'
+	base:				';'		# ; \u003B
+	shift:				':'		# : \u003A
+	ralt:				'\u016F'	# ů \u016F
+	shift+ralt, capslock+ralt:	'\u016E'	# Ů \u016E
+	capslock+shift+ralt:		'\u016F'	# ů \u016F
+}
+key APOSTROPHE {
+	label:				'\''
+	base:				'\''		# ' \u0027
+	shift:				'\"'		# " \u0022
+	ralt:				'\u00A7'	# § \u00A7
+	shift+ralt:			'\uFB03'	# ﬃ \uFB03
+}
+
+#key ENTER {
+#	label:				'\n'	
+#	base:				'\n'		# ⏎ \u000A
+#}
+
+### ROW 4
+
+#key KEYBOARD_LESS {
+#	label:				'\\'
+#	base:				'\\'		# \ \u005C
+#	shift:				'|'		# | \u007C
+#	ralt:				'<'		# < \u003C
+#	shift+ralt:			'>'		# > \u003E
+#}
+
+key Z {
+	label:				'Z'
+	base:				'z'		# z \u007A
+	shift, capslock:		'Z'		# Z \u005A
+	ralt:				'\u00B0'	# ° \u00B0
+	shift+ralt:			'\u2300'	# ⌀ \u2300
+}
+key X {
+	label:				'X'
+	base:				'x'		# x \u0078
+	shift, capslock:		'X'		# X \u0058
+	ralt:				'\u00D7'	# × \u00D7
+	shift+ralt:			'\u22C5'	# ⋅ \u22C5
+}
+key C {
+	label:				'C'
+	base:				'c'		# c \u0063
+	shift, capslock:		'C'		# C \u0043
+	ralt:				'\u00A9'	# © \u00A9
+	shift+ralt:			'\u2009'	# ∥ \u2009 thin space
+}
+key V {
+	label:				'V'
+	base:				'v'		# v \u0076
+	shift, capslock:		'V'		# V \u0056
+	ralt:				'@'		# @ \u0040
+	shift+ralt:			'\u202F'	# ∦ \u202F narrow non-breaking space
+}
+key B {
+	label:				'B'
+	base:				'b'		# b \u0062
+	shift, capslock:		'B'		# B \u0042
+	ralt:				'\u2022'	# • \u2022
+	shift+ralt:			'\u25E6'	# ◦ \u25E6
+}
+key N {
+	label:				'N'
+	base:				'n'		# n \u006E
+	shift, capslock:		'N'		# N \u004E
+	ralt:				'\u0148'	# ň \u0148
+	shift+ralt, capslock+ralt:	'\u0147'	# Ň \u0147
+	capslock+shift+ralt:		'\u0148'	# ň \u0148
+}
+key M {
+	label:				'M'
+	base:				'm'		# m \u006D
+	shift, capslock:		'M'		# M \u004D
+	ralt:				'\u203A'	# › \u203A
+	shift+ralt:			'\u2039'	# ‹ \u2039
+}
+key COMMA {
+	label:				','
+	base:				','		# , \u002C
+	shift:				'<'		# < \u003C
+	ralt:				'\u201E'	# „ \u201E
+	shift+ralt:			'\u201C'	# “ \u201C
+}
+key PERIOD {
+	label:				'.'
+	base:				'.'		# . \u002E
+	shift:				'>'		# > \u003E
+	ralt:				'\u2026'	# … \u2026
+	shift+ralt:			'\u201D'	# ” \u201D
+}
+key SLASH {
+	label:				'/'
+	base:				'/'		# / \u002F
+	shift:				'?'		# ? \u003F
+	ralt:				'\u2013'	# – \u2013
+	shift+ralt:			'\u2014'	# — \u2014
+}
+key SPACE {
+	label:				' '
+	base:				' '		# ␣ \u0020
+	ctrl:				fallback LANGUAGE_SWITCH
+	shift+ralt:			'\u00A0'	# ⍽ \u00A0
+}
+
+key NUMPAD_ENTER {
+	label:				'\n'	
+	base:				fallback ENTER
+}
+
+
+# https://source.android.com/devices/input/key-character-map-files
+# key Android_keyCode_name {
+#	System returns the last applicable behavior that it found.
+#	label:		physicaly printed label (returned by KeyCharacterMap.getDisplayLabel)
+#	number:		behavior in number input mode
+#	base:		behavior for a key regardless of active modifiers
+#	modifier, mod1+mod2:		behavior for a key when a modifier is / modifiers are active
+#	shift:		Applies when either the LEFT SHIFT or RIGHT SHIFT modifier is pressed.
+#	lshift:		Applies when the LEFT SHIFT modifier is pressed.
+#	rshift:		Applies when the RIGHT SHIFT modifier is pressed.
+#	alt:		Applies when either the LEFT ALT or RIGHT ALT modifier is pressed.
+#	lalt:		Applies when the LEFT ALT modifier is pressed.
+#	ralt:		Applies when the RIGHT ALT modifier is pressed.
+#	ctrl:		Applies when either the LEFT CONTROL or RIGHT CONTROL modifier is pressed.
+#	lctrl:		Applies when the LEFT CONTROL modifier is pressed.
+#	rctrl:		Applies when the RIGHT CONTROL modifier is pressed.
+#	meta:		Applies when either the LEFT META or RIGHT META modifier is pressed.
+#	lmeta:		Applies when the LEFT META modifier is pressed.
+#	rmeta:		Applies when the RIGHT META modifier is pressed.
+#	sym:		Applies when the SYMBOL modifier is pressed.
+#	fn:		Applies when the FUNCTION modifier is pressed.
+#	capslock:	Applies when the CAPS LOCK modifier is locked.
+#	numlock:	Applies when the NUM LOCK modifier is locked.
+#	scrolllock:	Applies when the SCROLL LOCK modifier is locked.
+#}
+# Behaviors:
+#	'c': c is ASCII except ' " \ t n which must be escaped by \ or Unicode \uXXXX
+#	fallback Android_keyCode: Perform a default action if the key is not handled by the application.
+#	'\uEF00': the text view consumes and removes the four characters preceding the cursor, interprets them as hex digits, and inserts the corresponding Unicode code point,
+#	'\uEF01': the text view displays a character picker dialog that contains miscellaneous symbols.
+# Keycodes:
+#	https://source.android.com/devices/input/keyboard-devices
+# Dead keys (see KeyCharacterMap.getDeadChar, https://www.unicode.org/charts/nameslist/n_0300.html):
+#	'\u0300': grave accent,
+#	'\u0301': acute accent,
+#	'\u0302': circumflex accent,
+#	'\u0303': tilde accent,
+#	'\u0308': umlaut accent.
+

@@ -23,7 +23,7 @@
 # remap Esc to ESCAPE
 map	key   1	ESCAPE	# Esc generates ESCAPE
 
-# In case of “fallback ENTER” for “NUMPAD_ENTER” does not work:
+# Enable in case of “fallback ENTER” for “NUMPAD_ENTER” does not work:
 map	key  96	ENTER	# NumPad Enter generates ENTER
 
 type OVERLAY
@@ -130,16 +130,20 @@ key EQUALS {
 }
 
 # BackSpace
-#key DEL {
-#	base:				fallback DEL
+key DEL {
+	base:				fallback DEL
+	rshift:				fallback FORWARD_DEL
 #	#shift, ralt:			map FORWARD_DEL		# not supported, only fallback which is useless
-#}
+	ralt:				'\uEF00'	# special: (not valid Unicode character) convert 4 hex digits preceding cursor to Unicode character
+}
 
 # Delete
-#key FORWARD_DEL {
-#	base:				fallback FORWARD_DEL
+key FORWARD_DEL {
+	base:				fallback FORWARD_DEL
+	rshift:				fallback INSERT
 #	#rshift, alt:			map INSERT		# not supported, only fallback which is useless
-#}
+	ralt:				'\uEF00'	# special: (not valid Unicode character) convert 4 hex digits preceding cursor to Unicode character
+}
 
 
 ### ROW 2
@@ -425,6 +429,27 @@ key SPACE {
 key NUMPAD_ENTER {
 	label:				'\n'	
 	base:				fallback ENTER
+}
+
+key NUMPAD_SUBTRACT {
+	label:				'-'
+	base:				'-'		# - \u002D
+	shift:				'\u2212'	# − \u2212
+}
+
+key NUMPAD_DIVIDE {
+	label:				'/'
+	base:				'/'		# / \u002F
+	shift:				'\u2044'	# ⁄ \u2044 (narrow fraction slash)
+	shift+alt:			'\u2215'	# ∕ \u2215 (narrow division slash)
+}
+
+key NUMPAD_MULTIPLY {
+	label:				'*'
+	base:				'*'		# * \u002A
+	shift:				'\u00D7'	# × \u00D7
+	alt:				'\u22C5'	# ⋅ \u22C5
+	shift+ralt:			'\uEF01'	# special: (not valid Unicode character) on-screen character picker
 }
 
 

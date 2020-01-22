@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rozložení pro HW klávesnici – cz-prog-typo</string>
+    <string name="app_name">Rozložení pro HW klávesnici – české programátorské typografické</string>
     <string name="keyboard_layout_czech">České programátorské typografické</string>
     <string name="keyboard_layout_label">Uživatelské rozložení klávesnice</string>
     <string name="app_label">Dodatečné rozložení klávesnice (české programátorské typgrafické)</string>

@@ -14,7 +14,7 @@
 
 #
 # Czech (programmers + typographic) keyboard layout.
-# Copyright (c) 2020 Tomáš Hudec
+# Copyright (c) 2020, 2024 Tomáš Hudec
 #
 
 # My bluetooth keyboard generates BACK for the Esc key (even in Windows mode).
@@ -50,69 +50,79 @@ key 1 {
 	shift:				'1'		# 1 \u0031
 	ralt:				'!'		# ! \u0021
 	shift+ralt:			'\u2019'	# ’ \u2019
+	ctrl:				'\u0001'	#   \u0001 ^A SOH (Start of Header)
 }
 key 2 {
 	label:				'\u011B'
-	base:				'\u011B'	# ě \u011B
+	base, shift+capslock:		'\u011B'	# ě \u011B
 	shift:				'2'		# 2 \u0032
 	ralt:				'@'		# @ \u0040
 	shift+ralt, capslock:		'\u011A'	# Ě \u011A
+	ctrl:				'\u0000'	#   \u0000 ^@ NUL
 }
 key 3 {
 	label:				'\u0161'
-	base:				'\u0161'	# š \u0161
+	base, shift+capslock:		'\u0161'	# š \u0161
 	shift:				'3'		# 3 \u0033
 	ralt:				'#'		# # \u0023
 	shift+ralt, capslock:		'\u0160'	# Š \u0160
+	ctrl:				'\u001B'	#   \u001B ^[ Esc
 }
 key 4 {
 	label:				'\u010D'
-	base:				'\u010D'	# č \u010D
+	base, shift+capslock:		'\u010D'	# č \u010D
 	shift:				'4'		# 4 \u0034
 	ralt:				'$'		# $ \u0024
 	shift+ralt, capslock:		'\u010C'	# Č \u010C
+	ctrl:				'\u001C'	#   \u001C ^\ FS (File Separator)
 }
 key 5 {
 	label:				'\u0159'
-	base:				'\u0159'	# ř \u0159
+	base, shift+capslock:		'\u0159'	# ř \u0159
 	shift:				'5'		# 5 \u0035
 	ralt:				'%'		# % \u0025
 	shift+ralt, capslock:		'\u0158'	# Ř \u0158
+	ctrl:				'\u001D'	#   \u001D ^] GS (Group Separator)
 }
 key 6 {
 	label:				'\u017E'
-	base:				'\u017E'	# ž \u017E
+	base, shift+capslock:		'\u017E'	# ž \u017E
 	shift:				'6'		# 6 \u0036
 	ralt:				'^'		# ^ \u005E
 	shift+ralt, capslock:		'\u017D'	# Ž \u017D
+	ctrl:				'\u001E'	#   \u001E ^^ RS (Record Separator)
 }
 key 7 {
 	label:				'\u00FD'
-	base:				'\u00FD'	# ý \u00FD
+	base, shift+capslock:		'\u00FD'	# ý \u00FD
 	shift:				'7'		# 7 \u0037
 	ralt:				'&'		# & \u0026
 	shift+ralt, capslock:		'\u00DD'	# Ý \u00DD
+	ctrl:				'\u001F'	#   \u001F ^_ US (Unit Separator)
 }
 key 8 {
 	label:				'\u00E1'
-	base:				'\u00E1'	# á \u00E1
+	base, shift+capslock:		'\u00E1'	# á \u00E1
 	shift:				'8'		# 8 \u0038
 	ralt:				'*'		# * \u002A
 	shift+ralt, capslock:		'\u00C1'	# Á \u00C1
+	ctrl:				'\u007F'	#   \u007F ^? Delete
 }
 key 9 {
 	label:				'\u00ED'
-	base:				'\u00ED'	# í \u00ED
+	base, shift+capslock:		'\u00ED'	# í \u00ED
 	shift:				'9'		# 9 \u0039
 	ralt:				'('		# ( \u0028
 	shift+ralt, capslock:		'\u00CD'	# Í \u00CD
+	ctrl:				'\u0009'	#   \u0009 \t Tab
 }
 key 0 {
 	label:				'\u00E9'
-	base:				'\u00E9'	# é \u00E9
+	base, shift+capslock:		'\u00E9'	# é \u00E9
 	shift:				'0'		# 0 \u0030
 	ralt:				')'		# ) \u0029
 	shift+ralt, capslock:		'\u00C9'	# É \u00C9
+	ctrl:				'\u0000'	#   \u0000 ^@ NUL
 }
 key MINUS {
 	label:				'='
@@ -155,35 +165,35 @@ key FORWARD_DEL {
 
 key Q {
 	label:				'Q'
-	base:				'q'		# q \u0071
+	base, shift+capslock:		'q'		# q \u0071
 	shift, capslock:		'Q'		# Q \u0051
 	ralt:				'\\'		# \ \u005C
 	shift+ralt, capslock+ralt:	'\u03A9'	# Ω \u03A9
 }
 key W {
 	label:				'W'
-	base:				'w'		# w \u0077
+	base, shift+capslock:		'w'		# w \u0077
 	shift, capslock:		'W'		# W \u0057
 	ralt:				'|'		# | \u007C
 	shift+ralt, capslock+ralt:	'\u0141'	# Ł \u0141
 }
 key E {
 	label:				'E'
-	base:				'e'		# e \u0065
+	base, shift+capslock:		'e'		# e \u0065
 	shift, capslock:		'E'		# E \u0045
 	ralt:				'\u20AC'	# € \u20AC
 	shift+ralt:			'\u00EB'	# ë \u00EB
 }
 key R {
 	label:				'R'
-	base:				'r'		# r \u0072
+	base, shift+capslock:		'r'		# r \u0072
 	shift, capslock:		'R'		# R \u0052
 	ralt:				'\u2030'	# ‰ \u2030
 	shift+ralt:			'\u00AE'	# ® \u00AE
 }
 key T {
 	label:				'T'
-	base:				't'		# t \u0074
+	base, shift+capslock:		't'		# t \u0074
 	shift, capslock:		'T'		# T \u0054
 	ralt:				'\u0165'	# ť \u0165
 	shift+ralt, capslock+ralt:	'\u0164'	# Ť \u0164
@@ -191,28 +201,28 @@ key T {
 }
 key Y {
 	label:				'Y'
-	base:				'y'		# y \u0079
+	base, shift+capslock:		'y'		# y \u0079
 	shift, capslock:		'Y'		# Y \u0059
 	ralt:				'\u2190'	# ← \u2190
 	shift+ralt:			'\u00A5'	# ¥ \u00A5
 }
 key U {
 	label:				'U'
-	base:				'u'		# u \u0075
+	base, shift+capslock:		'u'		# u \u0075
 	shift, capslock:		'U'		# U \u0055
 	ralt:				'\u2193'	# ↓ \u2193
 	shift+ralt:			'\u2191'	# ↑ \u2191
 }
 key I {
 	label:				'I'
-	base:				'i'		# i \u0069
+	base, shift+capslock:		'i'		# i \u0069
 	shift, capslock:		'I'		# I \u0049
 	ralt:				'\u2192'	# → \u2192
-	shift+ralt:			'\uFB01'	# ﬁ \uFB01
+	shift+ralt:			'\uFB01'	# ﬁ \uFB01 fi ligature
 }
 key O {
 	label:				'O'
-	base:				'o'		# o \u006F
+	base, shift+capslock:		'o'		# o \u006F
 	shift, capslock:		'O'		# O \u004F
 	ralt:				'\u00F3'	# ó \u00F3
 	shift+ralt, capslock+ralt:	'\u00D3'	# Ó \u00D3
@@ -220,7 +230,7 @@ key O {
 }
 key P {
 	label:				'P'
-	base:				'p'		# p \u0070
+	base, shift+capslock:		'p'		# p \u0070
 	shift, capslock:		'P'		# P \u0050
 	ralt:				'\u2032'	# ′ \u2032
 	shift+ralt:			'\u2033'	# ″ \u2033
@@ -229,9 +239,8 @@ key LEFT_BRACKET {
 	label:				'['
 	base:				'['		# [ \u005B
 	shift:				'{'		# { \u007B
-	ralt:				'\u00FA'	# ú \u00FA
+	ralt, capslock+shift+ralt:	'\u00FA'	# ú \u00FA
 	shift+ralt, capslock+ralt:	'\u00DA'	# Ú \u00DA
-	capslock+shift+ralt:		'\u00FA'	# ú \u00FA
 }
 key RIGHT_BRACKET {
 	label:				']'
@@ -246,91 +255,89 @@ key BACKSLASH {
 	base:				'\\'		# \ \u005C
 	shift:				'|'		# | \u007C
 	ralt:				'\u0308'	# ¨ \u0308
-	shift+ralt:			'\u00E0'	# à \u00E0
+	shift+ralt:			'\u030B'	# ˝ \u030B
 }
 
 ### ROW 3
 
 key A {
 	label:				'A'
-	base:				'a'		# a \u0061
+	base, shift+capslock:		'a'		# a \u0061
 	shift, capslock:		'A'		# A \u0041
-	ralt:				'\u00E6'	# æ \u00E6
+	ralt, capslock+shift+ralt:	'\u00E6'	# æ \u00E6
 	shift+ralt, capslock+ralt:	'\u00C6'	# Æ \u00C6
 }
 key S {
 	label:				'S'
-	base:				's'		# s \u0073
+	base, shift+capslock:		's'		# s \u0073
 	shift, capslock:		'S'		# S \u0053
 	ralt:				'\u00DF'	# ß \u00DF
-	#shift+ralt:			'\uFB06'	# ﬆ \uFB06
+	#shift+ralt:			'\uFB06'	# ﬆ \uFB06 st ligature
 	shift+ralt:			'\u00A0'	# ⍽ \u00A0
 }
 key D {
 	label:				'D'
-	base:				'd'		# d \u0064
+	base, shift+capslock:		'd'		# d \u0064
 	shift, capslock:		'D'		# D \u0044
-	ralt:				'\u010F'	# ď \u010F
+	ralt, capslock+shift+ralt:	'\u010F'	# ď \u010F
 	shift+ralt, capslock+ralt:	'\u010E'	# Ď \u010E
-	capslock+shift+ralt:		'\u010F'	# ď \u010F
 }
 key F {
 	label:				'F'
-	base:				'f'		# f \u0066
+	base, shift+capslock:		'f'		# f \u0066
 	shift, capslock:		'F'		# F \u0046
-	ralt:				'\uFB00'	# ﬀ \uFB00
-	shift+ralt:			'\uFB05'	# ﬅ \uFB05
+	ralt:				'\uFB00'	# ﬀ \uFB00 ff ligature
+	shift+ralt:			'\uFB05'	# ﬅ \uFB05 ft ligature
 }
 key G {
 	label:				'G'
-	base:				'g'		# g \u0067
+	base, shift+capslock:		'g'		# g \u0067
 	shift, capslock:		'G'		# G \u0047
-	ralt:				'\u014B'	# ŋ \u014B
-	shift+ralt, capslock+ralt:	'\u014A'	# Ŋ \u014A
-	capslock+shift+ralt:		'\u014B'	# ŋ \u014B
+	ralt, capslock+shift+ralt:	'\u014B'	# ŋ \u014B
+	#shift+ralt, capslock+ralt:	'\u014A'	# Ŋ \u014A
+	shift+ralt:			'\u2060'	#   \u2060    Word Joiner, useful around ndash – in ranges like 1–5
 }
 key H {
 	label:				'H'
-	base:				'h'		# h \u0068
+	base, shift+capslock:		'h'		# h \u0068
 	shift, capslock:		'H'		# H \u0048
 	ralt:				'\u2010'	# ‐ \u2010
 	shift+ralt:			'\u2011'	# ‑ \u2011
 }
 key J {
 	label:				'J'
-	base:				'j'		# j \u006A
+	base, shift+capslock:		'j'		# j \u006A
 	shift, capslock:		'J'		# J \u004A
 	ralt:				'\u00BB'	# » \u00BB
 	shift+ralt:			'\u00AB'	# « \u00AB
 }
 key K {
 	label:				'K'
-	base:				'k'		# k \u006B
+	base, shift+capslock:		'k'		# k \u006B
 	shift, capslock:		'K'		# K \u004B
 	ralt:				'\u2020'	# † \u2020
 	shift+ralt:			'\u2021'	# ‡ \u2021
 }
 key L {
 	label:				'L'
-	base:				'l'		# l \u006C
+	base, shift+capslock:		'l'		# l \u006C
 	shift, capslock:		'L'		# L \u004C
-	ralt:				'\uFB02'	# ﬂ \uFB02
-	shift+ralt:			'\uFB04'	# ﬄ \uFB04
+	ralt:				'\uFB02'	# ﬂ \uFB02 fl ligature
+	shift+ralt:			'\uFB04'	# ﬄ \uFB04 ffl ligature
 }
 key SEMICOLON {
 	label:				';'
 	base:				';'		# ; \u003B
 	shift:				':'		# : \u003A
-	ralt:				'\u016F'	# ů \u016F
+	ralt, capslock+shift+ralt:	'\u016F'	# ů \u016F
 	shift+ralt, capslock+ralt:	'\u016E'	# Ů \u016E
-	capslock+shift+ralt:		'\u016F'	# ů \u016F
 }
 key APOSTROPHE {
 	label:				'\''
 	base:				'\''		# ' \u0027
 	shift:				'\"'		# " \u0022
 	ralt:				'\u00A7'	# § \u00A7
-	shift+ralt:			'\uFB03'	# ﬃ \uFB03
+	shift+ralt:			'\uFB03'	# ﬃ \uFB03 ffi ligature
 }
 
 #key ENTER {
@@ -350,50 +357,49 @@ key APOSTROPHE {
 
 key Z {
 	label:				'Z'
-	base:				'z'		# z \u007A
+	base, shift+capslock:		'z'		# z \u007A
 	shift, capslock:		'Z'		# Z \u005A
 	ralt:				'\u00B0'	# ° \u00B0
 	shift+ralt:			'\u2300'	# ⌀ \u2300
 }
 key X {
 	label:				'X'
-	base:				'x'		# x \u0078
+	base, shift+capslock:		'x'		# x \u0078
 	shift, capslock:		'X'		# X \u0058
 	ralt:				'\u00D7'	# × \u00D7
 	shift+ralt:			'\u22C5'	# ⋅ \u22C5
 }
 key C {
 	label:				'C'
-	base:				'c'		# c \u0063
+	base, shift+capslock:		'c'		# c \u0063
 	shift, capslock:		'C'		# C \u0043
 	ralt:				'\u00A9'	# © \u00A9
 	shift+ralt:			'\u2009'	# ∥ \u2009 thin space
 }
 key V {
 	label:				'V'
-	base:				'v'		# v \u0076
+	base, shift+capslock:		'v'		# v \u0076
 	shift, capslock:		'V'		# V \u0056
 	ralt:				'@'		# @ \u0040
 	shift+ralt:			'\u202F'	# ∦ \u202F narrow non-breaking space
 }
 key B {
 	label:				'B'
-	base:				'b'		# b \u0062
+	base, shift+capslock:		'b'		# b \u0062
 	shift, capslock:		'B'		# B \u0042
 	ralt:				'\u2022'	# • \u2022
 	shift+ralt:			'\u25E6'	# ◦ \u25E6
 }
 key N {
 	label:				'N'
-	base:				'n'		# n \u006E
+	base, shift+capslock:		'n'		# n \u006E
 	shift, capslock:		'N'		# N \u004E
-	ralt:				'\u0148'	# ň \u0148
+	ralt, capslock+shift+ralt:	'\u0148'	# ň \u0148
 	shift+ralt, capslock+ralt:	'\u0147'	# Ň \u0147
-	capslock+shift+ralt:		'\u0148'	# ň \u0148
 }
 key M {
 	label:				'M'
-	base:				'm'		# m \u006D
+	base, shift+capslock:		'm'		# m \u006D
 	shift, capslock:		'M'		# M \u004D
 	ralt:				'\u203A'	# › \u203A
 	shift+ralt:			'\u2039'	# ‹ \u2039
@@ -423,9 +429,13 @@ key SPACE {
 	label:				' '
 	base:				' '		# ␣ \u0020
 	ctrl:				fallback LANGUAGE_SWITCH
+	shift:				' '		# ␣ \u0020
 	shift+ralt:			'\u00A0'	# ⍽ \u00A0
 }
 
+# numeric pad
+
+# ⏎ \u000A
 key NUMPAD_ENTER {
 	label:				'\n'	
 	base:				fallback ENTER
@@ -433,25 +443,135 @@ key NUMPAD_ENTER {
 
 key NUMPAD_SUBTRACT {
 	label:				'-'
-	base:				'-'		# - \u002D
+	base, number:			'-'		# - \u002D
 	shift:				'\u2212'	# − \u2212
+	ctrl, alt, meta:		none
+	ralt:				'\u2717'	# ✗ \u2717
+	shift+alt:			'\u2718'	# ✘ \u2718
+}
+
+key NUMPAD_ADD {
+	label:				'+'
+	base, number:			'+'		# + \u002B
+	ctrl, alt, meta:		none
+	ralt:				'\u2713'	# ✓ \u2713
+	shift+alt:			'\u2714'	# ✔ \u2714
 }
 
 key NUMPAD_DIVIDE {
 	label:				'/'
-	base:				'/'		# / \u002F
+	base, number:			'/'		# / \u002F
 	shift:				'\u2044'	# ⁄ \u2044 (narrow fraction slash)
+	ctrl, alt, meta:		none
+	ralt:				'\u00F7'	# ÷ \u00F7
 	shift+alt:			'\u2215'	# ∕ \u2215 (narrow division slash)
 }
 
 key NUMPAD_MULTIPLY {
 	label:				'*'
-	base:				'*'		# * \u002A
+	base, number:			'*'		# * \u002A
 	shift:				'\u00D7'	# × \u00D7
-	alt:				'\u22C5'	# ⋅ \u22C5
-	shift+ralt:			'\uEF01'	# special: (not valid Unicode character) on-screen character picker
+	alt:				'\u22C5'	# ⋅ \u22C5 (either alt can be used)
+	shift+alt:			'\uEF01'	# special: (not valid Unicode character) on-screen character picker
 }
 
+key NUMPAD_DOT {
+	label, number:			'.'
+	base, numlock+shift:		fallback FORWARD_DEL
+	shift, numlock:			'.'		# . \u002E
+	ctrl, alt, meta:		none
+	ralt:				','		# , \u002C
+	shift+ralt:			'\u202F'	# ∦ \u202F (narrow non-breaking space)
+}
+
+key NUMPAD_COMMA {
+	label:				','
+	base, number:			','		# , \u002C
+	shift:				'.'		# . \u002E
+	ctrl, alt, meta:		none
+	ralt:				'\u202F'	# ∦ \u202F (narrow non-breaking space)
+}
+
+key NUMPAD_0 {
+	label, number:			'0'
+	base, numlock+shift:		fallback INSERT
+	shift, numlock:			'0'		# 0 \u0030
+	ctrl, alt, meta:		none
+	ralt:				'\u2195'	# ↕ \u2195
+	shift+ralt:			'\u21D5'	# ⇕ \u21D5
+}
+key NUMPAD_1 {
+	label, number:			'1'
+	base, numlock+shift:		fallback MOVE_END
+	shift, numlock:			'1'		# 1 \u0031
+	ctrl, alt, meta:		none
+	ralt:				'\u2199'	# ↙ \u2199
+	shift+ralt:			'\u21D9'	# ⇙ \u21D9
+}
+key NUMPAD_2 {
+	label, number:			'2'
+	base, numlock+shift:		fallback DPAD_DOWN
+	shift, numlock:			'2'		# 2 \u0032
+	ctrl, alt, meta:		none
+	ralt:				'\u2193'	# ↓ \u2193
+	shift+ralt:			'\u21D3'	# ⇓ \u21D3
+}
+key NUMPAD_3 {
+	label, number:			'3'
+	base, numlock+shift:		fallback PAGE_DOWN
+	shift, numlock:			'3'		# 3 \u0033
+	ctrl, alt, meta:		none
+	ralt:				'\u2198'	# ↘ \u2198
+	shift+ralt:			'\u21D8'	# ⇘ \u21D8
+}
+key NUMPAD_4 {
+	label, number:			'4'
+	base, numlock+shift:		fallback DPAD_LEFT
+	shift, numlock:			'4'		# 4 \u0034
+	ctrl, alt, meta:		none
+	ralt:				'\u2190'	# ← \u2190
+	shift+ralt:			'\u21D0'	# ⇐ \u21D0
+}
+key NUMPAD_5 {
+	label, number:			'5'
+	base, numlock+shift:		fallback DPAD_CENTER
+	shift, numlock:			'5'		# 5 \u0035
+	ctrl, alt, meta:		none
+	ralt:				'\u2194'	# ↔ \u2194
+	shift+ralt:			'\u21D4'	# ⇔ \u21D4
+}
+key NUMPAD_6 {
+	label, number:			'6'
+	base, numlock+shift:		fallback DPAD_RIGHT
+	shift, numlock:			'6'		# 6 \u0036
+	ctrl, alt, meta:		none
+	ralt:				'\u2192'	# → \u2192
+	shift+ralt:			'\u21D2'	# ⇒ \u21D2
+}
+key NUMPAD_7 {
+	label, number:			'7'
+	base, numlock+shift:		fallback MOVE_HOME
+	shift, numlock:			'7'		# 7 \u0037
+	ctrl, alt, meta:		none
+	ralt:				'\u2196'	# ↖ \u2196
+	shift+ralt:			'\u21D6'	# ⇖ \u21D6
+}
+key NUMPAD_8 {
+	label, number:			'8'
+	base, numlock+shift:		fallback DPAD_UP
+	shift, numlock:			'8'		# 8 \u0038
+	ctrl, alt, meta:		none
+	ralt:				'\u2191'	# ↑ \u2191
+	shift+ralt:			'\u21D1'	# ⇑ \u21D1
+}
+key NUMPAD_9 {
+	label, number:			'9'
+	base, numlock+shift:		fallback PAGE_UP
+	shift, numlock:			'9'		# 9 \u0039
+	ctrl, alt, meta:		none
+	ralt:				'\u2197'	# ↗ \u2197
+	shift+ralt:			'\u21D7'	# ⇗ \u21D7
+}
 
 # https://source.android.com/devices/input/key-character-map-files
 # key Android_keyCode_name {
@@ -479,7 +599,7 @@ key NUMPAD_MULTIPLY {
 #	scrolllock:	Applies when the SCROLL LOCK modifier is locked.
 #}
 # Behaviors:
-#	'c': c is ASCII except ' " \ t n which must be escaped by \ or Unicode \uXXXX
+#	'c': c is ASCII except ' " \ \t \n which must be escaped by \ or Unicode \uXXXX
 #	fallback Android_keyCode: Perform a default action if the key is not handled by the application.
 #	'\uEF00': the text view consumes and removes the four characters preceding the cursor, interprets them as hex digits, and inserts the corresponding Unicode code point,
 #	'\uEF01': the text view displays a character picker dialog that contains miscellaneous symbols.
@@ -491,4 +611,3 @@ key NUMPAD_MULTIPLY {
 #	'\u0302': circumflex accent,
 #	'\u0303': tilde accent,
 #	'\u0308': umlaut accent.
-

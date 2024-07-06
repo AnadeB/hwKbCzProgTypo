@@ -4,5 +4,5 @@
     <string name="keyboard_layout_czech">České programátorské typografické</string>
     <string name="keyboard_layout_label">Uživatelské rozložení klávesnice</string>
     <string name="app_label">Dodatečné rozložení klávesnice (české programátorské typgrafické)</string>
-    <string name="app_welcome">Czech layout map file is installed. To set it go to Settings → Language and input → Physical keyboard → select your HW keyboard (must be connected) and choose Czech Programmer Typographic layout for your input method.</string>
+    <string name="app_welcome">Soubor českého rozložení klávesnice je instalován. Pro jeho aktivaci přejděte do Nastavení → Jazyk a vstup → Fyzická klávesnice → vyberte vaši HW klávesnici (musí být připojena) a zvolte pro vaši vstupní metodu rozložení České programátorské typografické.</string>
 </resources>
